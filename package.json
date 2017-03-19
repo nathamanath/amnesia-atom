@@ -1,0 +1,27 @@
+{
+  "name": "amnesia-io",
+  "version": "0.0.1",
+  "description": "Amnesia.io intergration for atom text editor",
+  "main": "./lib/amnesia-io.js",
+  "scripts": {
+    "test": "$(npm bin)/mocha --compilers js:babel-core/register --recursive --reporter nyan ./test"
+  },
+  "keywords": [
+    "amnesia.io",
+    "amnesia",
+    "share code",
+    "collaboration"
+  ],
+  "author": "NathanG",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "repository": "https://github.com/nathamanath/amnesia-atom",
+  "devDependencies": {
+    "babel-core": "^6.24.0",
+    "babel-preset-es2015": "^6.24.0",
+    "fake-xml-http-request": "^1.4.0",
+    "jasmine-ajax": "^3.3.1",
+    "mocha": "^3.2.0"
+  }
+}

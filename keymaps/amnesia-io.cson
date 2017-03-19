@@ -1,0 +1,23 @@
+# Keybindings require three things to be fully defined: A selector that is
+# matched against the focused element, the keystroke and the command to
+# execute.
+#
+# Below is a basic keybinding which registers on all platforms by applying to
+# the root workspace element.
+
+# For more detailed documentation see
+# https://atom.io/docs/latest/advanced/keymaps
+'.platform-darwin atom-workspace':
+  'cmd-alt-shift-f': 'amnesia-io:share-file'
+  'cmd-alt-shift-s': 'amnesia-io:share-selected'
+  'cmd-alt-shift-b': 'amnesia-io:share-block'
+
+'.platform-win32 atom-workspace':
+  'ctrl-alt-shift-f': 'amnesia-io:share-file'
+  'ctrl-alt-shift-s': 'amnesia-io:share-selected'
+  'ctrl-alt-shift-b': 'amnesia-io:share-block'
+
+'.platform-linux atom-workspace':
+  'ctrl-alt-shift-f': 'amnesia-io:share-file'
+  'ctrl-alt-shift-s': 'amnesia-io:share-selected'
+  'ctrl-alt-shift-b': 'amnesia-io:share-block'
