@@ -55,7 +55,7 @@ See example below, values shown are defaults:
 
       # Syntax highlighting format which will be used if it cannot be discerned
       # from your file name
-      defaultFormat: "txt"
+      defaultFormat: "bash"
 
     ...
 ```
