@@ -1,6 +1,6 @@
 # Amnesia-io
 
-[https://amnesia.io](Amnesia.io) integration for [atom](https://atom.io/).
+[Amnesia.io](https://amnesia.io) integration for [atom](https://atom.io/).
 
 This atom text editor package allows you to share code via amnesia.io directly
 from atom, and writes a share link to your clipboard ready for you to pass on.
@@ -12,9 +12,9 @@ features. Read more about it at https://amnesia.io.
 
 ### Installation
 
-1, In Atom, open Preferences (`ctrl-,`)
-2, Go to Install section
-3, Search for amnesia-io package. Once it found, click Install button to install package.
+* In Atom, open Preferences (`ctrl-,`)
+* Go to Install section
+* Search for amnesia-io package. Once it found, click Install button to install package.
 
 #### Manual installation
 
