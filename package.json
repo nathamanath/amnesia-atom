@@ -1,6 +1,6 @@
 {
   "name": "amnesia-io",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Amnesia.io integration for atom text editor",
   "main": "./lib/amnesia-io.js",
   "keywords": [
