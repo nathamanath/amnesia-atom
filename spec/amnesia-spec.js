@@ -61,8 +61,8 @@ describe('AmnesiaIo', function() {
 
     it('shares file content', function() {
       let payload = {
-        code: readFile('code.js'),
-        format: 'js',
+        content: readFile('code.js'),
+        extension: 'js',
         ttl: 60000
       }
 
@@ -84,8 +84,8 @@ describe('AmnesiaIo', function() {
 
     it('shares selected content', function() {
       let payload = {
-        code: 'let test = true',
-        format: 'js',
+        content: 'let test = true',
+        extension: 'js',
         ttl: 60000
       }
 
@@ -108,8 +108,8 @@ describe('AmnesiaIo', function() {
 
     it('shares selected content', function() {
       let payload = {
-        code: 'let test = true\nlet thing = false\nlet somethingElse = 12',
-        format: 'js',
+        content: 'let test = true\nlet thing = false\nlet somethingElse = 12',
+        extension: 'js',
         ttl: 60000
       }
 
@@ -133,7 +133,7 @@ describe('AmnesiaIo', function() {
 
       it('gets format from file extension', function() {
         atomCommand(getEditor(), 'amnesia-io:share-file')
-        assert.equal(JSON.parse(requests[0].requestBody).format, 'js')
+        assert.equal(JSON.parse(requests[0].requestBody).extension, 'js')
       })
     })
 
@@ -148,7 +148,7 @@ describe('AmnesiaIo', function() {
 
       it('uses default format if no extension', function() {
         atomCommand(getEditor(), 'amnesia-io:share-file')
-        assert.equal(JSON.parse(requests[0].requestBody).format, 'bash')
+        assert.equal(JSON.parse(requests[0].requestBody).extension, 'bash')
       })
 
     })
