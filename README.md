@@ -16,21 +16,15 @@ features. Read more about it at https://amnesia.io.
 * Go to Install section
 * Search for amnesia-io package. Once it found, click Install button to install package.
 
-#### Manual installation
-
-```bash
-  git clone https://github.com/nathamanath/amnesia-atom ~/.atom/packages/amnesia-atom
-  cd ~/.atom/packages/amnesia-atom
-  npm install
-```
+or `apm install amnesia-io`
 
 ### Functionality
 
 The amnesia-io package adds the following behaviour to atom:
 
-* `amnesia-io:shareFile` - Share the content of the current file.
-* `amnesia-io:shareSelection` - Share the highlighted selection.
-* `amnesia-io:shareBlock` - Share the current code block.
+* `amnesia-io:share-file` - Share the content of the current file.
+* `amnesia-io:share-selection` - Share the highlighted selection.
+* `amnesia-io:share-block` - Share the current code block.
 
 For each you get an atom notification of success or error. On successfully uploading
 code to amnesia.io, your unique share link is written to your clipboard.
