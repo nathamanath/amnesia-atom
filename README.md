@@ -25,6 +25,7 @@ The amnesia-io package adds the following behaviour to atom:
 * `amnesia-io:share-file` - Share the content of the current file.
 * `amnesia-io:share-selection` - Share the highlighted selection.
 * `amnesia-io:share-block` - Share the current code block.
+* `amnesia-io:share-line` - Share the current line.
 
 For each you get an atom notification of success or error. On successfully uploading
 code to amnesia.io, your unique share link is written to your clipboard.
@@ -63,6 +64,7 @@ Default key mappings are as follows:
 | amnesia-io:share-file      | ctrl-alt-shift-f | ctrl-alt-shift-f | cmd-alt-shift-f |
 | amnesia-io:share-selection | ctrl-alt-shift-s | ctrl-alt-shift-s | cmd-alt-shift-s |
 | amnesia-io:share-block     | ctrl-alt-shift-b | ctrl-alt-shift-b | cmd-alt-shift-b |
+| amnesia-io:share-line      | ctrl-alt-shift-l | ctrl-alt-shift-l | cmd-alt-shift-l |
 
 Keymaps can be overridden in `~/.atom/keymap.cson` like so:
 

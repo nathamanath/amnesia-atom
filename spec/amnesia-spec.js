@@ -122,6 +122,28 @@ describe('AmnesiaIo', function() {
     })
   })
 
+  describe('amnesia-io:share-line', function() {
+    beforeEach(function() {
+      waitsForPromise(function() {
+        return atom.workspace.open('code.js')
+      })
+    })
+
+    it('shares the current line', function() {
+      let payload = {
+        content: 'let thing = false',
+        extension: 'js',
+        ttl: 60000
+      }
+
+      let editor = getEditor()
+      editor.setCursorBufferPosition([3, 5])
+
+      atomCommand(editor, 'amnesia-io:share-line')
+      makeAssertions(requests, payload)
+    })
+  })
+
   describe('highlighting format', function() {
 
     describe('with extension', function() {
