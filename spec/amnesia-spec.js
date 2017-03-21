@@ -4,10 +4,11 @@
 //
 // To run a specific `it` or `describe` block add an `f` to the front (e.g. `fit`
 // or `fdescribe`). Remove the `f` to unfocus the block.
-
 import assert from 'assert'
 import fs from 'fs'
 import Path from 'path'
+
+// FIXME: FakeXMLHttpRequest is not working properly in atom 1.16.0-beta0
 import FakeXMLHttpRequest from "fake-xml-http-request"
 
 import {Range, Point} from'atom'

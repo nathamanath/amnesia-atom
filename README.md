@@ -58,11 +58,11 @@ See example below, values shown are defaults:
 
 Default key mappings are as follows:
 
-|                | Windows          | Linux            | OSX             |
-|----------------|------------------|------------------|-----------------|
-| shareFile      | ctrl-alt-shift-f | ctrl-alt-shift-f | cmd-alt-shift-f |
-| shareSelection | ctrl-alt-shift-s | ctrl-alt-shift-s | cmd-alt-shift-s |
-| shareBlock     | ctrl-alt-shift-b | ctrl-alt-shift-b | cmd-alt-shift-b |
+|                            | Windows          | Linux            | OSX             |
+|----------------------------|------------------|------------------|-----------------|
+| amnesia-io:share-file      | ctrl-alt-shift-f | ctrl-alt-shift-f | cmd-alt-shift-f |
+| amnesia-io:share-selection | ctrl-alt-shift-s | ctrl-alt-shift-s | cmd-alt-shift-s |
+| amnesia-io:share-block     | ctrl-alt-shift-b | ctrl-alt-shift-b | cmd-alt-shift-b |
 
 Keymaps can be overridden in `~/.atom/keymap.cson` like so:
 
