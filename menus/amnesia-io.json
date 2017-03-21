@@ -1,0 +1,10 @@
+{
+  "context-menu": {
+    ".tree-view [is=tree-view-file]": [
+      {
+        "label": "Share file",
+        "command": "amnesia-io:tree-share-file"
+      }
+    ]
+  }
+}

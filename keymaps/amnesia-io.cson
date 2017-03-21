@@ -11,13 +11,16 @@
   'cmd-alt-shift-f': 'amnesia-io:share-file'
   'cmd-alt-shift-s': 'amnesia-io:share-selected'
   'cmd-alt-shift-b': 'amnesia-io:share-block'
+  'cmd-alt-shift-l': 'amnesia-io:share-line'
 
 '.platform-win32 atom-workspace':
   'ctrl-alt-shift-f': 'amnesia-io:share-file'
   'ctrl-alt-shift-s': 'amnesia-io:share-selected'
   'ctrl-alt-shift-b': 'amnesia-io:share-block'
+  'cmd-alt-shift-l': 'amnesia-io:share-line'
 
 '.platform-linux atom-workspace':
   'ctrl-alt-shift-f': 'amnesia-io:share-file'
   'ctrl-alt-shift-s': 'amnesia-io:share-selected'
   'ctrl-alt-shift-b': 'amnesia-io:share-block'
+  'cmd-alt-shift-l': 'amnesia-io:share-line'
