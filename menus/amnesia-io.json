@@ -2,7 +2,7 @@
   "context-menu": {
     ".tree-view [is=tree-view-file]": [
       {
-        "label": "Share file",
+        "label": "Share on amnesia.io",
         "command": "amnesia-io:tree-share-file"
       }
     ]
