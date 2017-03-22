@@ -44,7 +44,7 @@ describe('AmnesiaIo', function() {
 
     requests = []
 
-    global.XMLHttpRequest = () => {
+    global.XMLHttpRequest = function() {
       let r =  new FakeXMLHttpRequest(arguments)
       requests.push(r)
       return r
