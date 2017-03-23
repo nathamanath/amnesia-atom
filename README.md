@@ -3,10 +3,12 @@
 [Amnesia.io](https://amnesia.io) integration for [atom](https://atom.io/).
 
 This atom text editor package allows you to share code via amnesia.io directly
-from atom, and writes a share link to your clipboard ready for you to pass on.
+from atom, and copies share link to your clipboard ready for you to pass on.
 
 Amnesia.io is an ephemeral code sharing service with nice collaboration and privacy
 features. Read more about it at https://amnesia.io.
+
+Also available for [Sublime text 3](https://github.com/jolyongray/amnesia-sublime)
 
 ## Usage
 
@@ -16,7 +18,7 @@ features. Read more about it at https://amnesia.io.
 * Go to Install section
 * Search for amnesia-io package. Once it found, click Install button to install package.
 
-or `apm install amnesia-io`
+or run `apm install amnesia-io`
 
 ### Functionality
 
@@ -46,7 +48,7 @@ See example below, values shown are defaults:
     "amnesia-io":
 
       # How long amnesia.io will hold on to your code snippets for
-      ttl: 6000,           
+      ttl: 43200,           
 
       # Syntax highlighting format which will be used if it cannot be discerned
       # from your file name
