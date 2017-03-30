@@ -97,6 +97,24 @@ describe('AmnesiaIo', function() {
       atomCommand(editor, 'amnesia-io:share-selected')
       makeAssertions(requests, payload)
     })
+
+    it('shares multiple selections', function() {
+      let payload = {
+        content: 'let test = true\n\n...\n\nsomethingElse',
+        extension: 'js',
+        ttl: 43200
+      }
+
+      let editor = getEditor()
+      let range1 = new Range(new Point(2, 0), new Point(2, 15))
+      let range2 = new Range(new Point(4, 4), new Point(4, 17))
+
+      editor.addSelectionForBufferRange(range1)
+      editor.addSelectionForBufferRange(range2)
+
+      atomCommand(editor, 'amnesia-io:share-selected')
+      makeAssertions(requests, payload)
+    })
   })
 
   describe('amnesia-io:shareBlock', function() {
