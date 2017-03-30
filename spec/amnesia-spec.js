@@ -160,6 +160,21 @@ describe('AmnesiaIo', function() {
       atomCommand(editor, 'amnesia-io:share-line')
       makeAssertions(requests, payload)
     })
+
+    it('shares multiple lines', function() {
+      let payload = {
+        content: 'let thing = false\n\n...\n\nlet somethingElse = 12',
+        extension: 'js',
+        ttl: 43200
+      }
+
+      let editor = getEditor()
+      editor.setCursorBufferPosition([3, 5])
+      editor.addCursorAtBufferPosition([4, 1])
+
+      atomCommand(editor, 'amnesia-io:share-line')
+      makeAssertions(requests, payload)
+    })
   })
 
   describe('highlighting format', function() {
