@@ -97,6 +97,24 @@ describe('AmnesiaIo', function() {
       atomCommand(editor, 'amnesia-io:share-selected')
       makeAssertions(requests, payload)
     })
+
+    it('shares multiple selections', function() {
+      let payload = {
+        content: 'let test = true\n\n...\n\nsomethingElse',
+        extension: 'js',
+        ttl: 43200
+      }
+
+      let editor = getEditor()
+      let range1 = new Range(new Point(2, 0), new Point(2, 15))
+      let range2 = new Range(new Point(4, 4), new Point(4, 17))
+
+      editor.addSelectionForBufferRange(range1)
+      editor.addSelectionForBufferRange(range2)
+
+      atomCommand(editor, 'amnesia-io:share-selected')
+      makeAssertions(requests, payload)
+    })
   })
 
   describe('amnesia-io:shareBlock', function() {
@@ -107,7 +125,7 @@ describe('AmnesiaIo', function() {
       })
     })
 
-    it('shares selected content', function() {
+    it('shares current block', function() {
       let payload = {
         content: 'let test = true\nlet thing = false\nlet somethingElse = 12',
         extension: 'js',
@@ -116,6 +134,21 @@ describe('AmnesiaIo', function() {
 
       let editor = getEditor()
       editor.setCursorBufferPosition([3, 1])
+
+      atomCommand(editor, 'amnesia-io:share-block')
+      makeAssertions(requests, payload)
+    })
+
+    it('shares multiple blocks', function() {
+      let payload = {
+        content: 'let test = true\nlet thing = false\nlet somethingElse = 12\n\n...\n\nlet block2 = this',
+        extension: 'js',
+        ttl: 43200
+      }
+
+      let editor = getEditor()
+      editor.setCursorBufferPosition([3, 1])
+      editor.addCursorAtBufferPosition([6, 1])
 
       atomCommand(editor, 'amnesia-io:share-block')
       makeAssertions(requests, payload)
@@ -138,6 +171,21 @@ describe('AmnesiaIo', function() {
 
       let editor = getEditor()
       editor.setCursorBufferPosition([3, 5])
+
+      atomCommand(editor, 'amnesia-io:share-line')
+      makeAssertions(requests, payload)
+    })
+
+    it('shares multiple lines', function() {
+      let payload = {
+        content: 'let thing = false\n\n...\n\nlet somethingElse = 12',
+        extension: 'js',
+        ttl: 43200
+      }
+
+      let editor = getEditor()
+      editor.setCursorBufferPosition([3, 5])
+      editor.addCursorAtBufferPosition([4, 1])
 
       atomCommand(editor, 'amnesia-io:share-line')
       makeAssertions(requests, payload)
