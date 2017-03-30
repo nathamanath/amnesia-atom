@@ -125,7 +125,7 @@ describe('AmnesiaIo', function() {
       })
     })
 
-    it('shares selected content', function() {
+    it('shares current block', function() {
       let payload = {
         content: 'let test = true\nlet thing = false\nlet somethingElse = 12',
         extension: 'js',
@@ -134,6 +134,21 @@ describe('AmnesiaIo', function() {
 
       let editor = getEditor()
       editor.setCursorBufferPosition([3, 1])
+
+      atomCommand(editor, 'amnesia-io:share-block')
+      makeAssertions(requests, payload)
+    })
+
+    it('shares multiple blocks', function() {
+      let payload = {
+        content: 'let test = true\nlet thing = false\nlet somethingElse = 12\n\n...\n\nlet block2 = this',
+        extension: 'js',
+        ttl: 43200
+      }
+
+      let editor = getEditor()
+      editor.setCursorBufferPosition([3, 1])
+      editor.addCursorAtBufferPosition([6, 1])
 
       atomCommand(editor, 'amnesia-io:share-block')
       makeAssertions(requests, payload)
