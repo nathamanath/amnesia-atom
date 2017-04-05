@@ -25,9 +25,9 @@ or run `apm install amnesia-io`
 The amnesia-io package adds the following behaviour to atom:
 
 * `amnesia-io:share-file` - Share the content of the current file.
-* `amnesia-io:share-selection` - Share the highlighted selection.
-* `amnesia-io:share-block` - Share the current code block.
-* `amnesia-io:share-line` - Share the current line.
+* `amnesia-io:share-selection` - Share the highlighted selection(s).
+* `amnesia-io:share-block` - Share the current code block(s).
+* `amnesia-io:share-line` - Share the current line(s).
 
 For each you get an atom notification of success or error. On successfully uploading
 code to amnesia.io, your unique share link is written to your clipboard.
