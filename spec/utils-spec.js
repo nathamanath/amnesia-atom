@@ -31,22 +31,23 @@ describe('Utils', function() {
 
       assert.equal(Utils.normalizeSpacing(spacious), fixed)
 
-      // or blanks with trailing spaces
+      // or blank lines with trailing spaces
       let spacious1 = "  bla\n \n    blabla\n    blabla\n  bla"
       let fixed1 = "bla\n \n  blabla\n  blabla\nbla"
 
       assert.equal(Utils.normalizeSpacing(spacious1), fixed1)
     })
 
-    it('ignores the multi selection delimeter', function() {
-      let spacious = "  bla\n\n    blabla\n\n...\n\n    blabla\n  bla"
-      let fixed = "bla\n\n  blabla\n  blabla\nbla"
+    it('handles osx, unix, and windows line endings', function() {
+      let win = "  bla\r\n \r\n    blabla\r\n    blabla\r\n  bla"
+      let osx = "  bla\r \r    blabla\r    blabla\r  bla"
+      let unix = "  bla\n \n    blabla\n    blabla\n  bla"
 
-      assert.equal(Utils.normalizeSpacing(spacious), fixed)
-    })
+      let fixed = "bla\n \n  blabla\n  blabla\nbla"
 
-    it('handles osx and windows line endings', function() {
-      assert.equal(false, true)
+      assert.equal(Utils.normalizeSpacing(win), fixed)
+      assert.equal(Utils.normalizeSpacing(osx), fixed)
+      assert.equal(Utils.normalizeSpacing(unix), fixed)
     })
 
     it('dosent change spacing when it shouldnt', function() {
