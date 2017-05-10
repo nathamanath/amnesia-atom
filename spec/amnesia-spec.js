@@ -64,7 +64,7 @@ describe('AmnesiaIo', function() {
       let payload = {
         content: readFile('code.js'),
         extension: 'js',
-        ttl: 43200
+        ttl: 86400
       }
 
       let editor = getEditor()
@@ -87,7 +87,7 @@ describe('AmnesiaIo', function() {
       let payload = {
         content: 'let test = true',
         extension: 'js',
-        ttl: 43200
+        ttl: 86400
       }
 
       let editor = getEditor()
@@ -102,7 +102,7 @@ describe('AmnesiaIo', function() {
       let payload = {
         content: 'let test = true\n\n...\n\nsomethingElse',
         extension: 'js',
-        ttl: 43200
+        ttl: 86400
       }
 
       let editor = getEditor()
@@ -129,7 +129,7 @@ describe('AmnesiaIo', function() {
       let payload = {
         content: 'let test = true\nlet thing = false\nlet somethingElse = 12',
         extension: 'js',
-        ttl: 43200
+        ttl: 86400
       }
 
       let editor = getEditor()
@@ -143,7 +143,7 @@ describe('AmnesiaIo', function() {
       let payload = {
         content: 'let test = true\nlet thing = false\nlet somethingElse = 12\n\n...\n\nlet block2 = this',
         extension: 'js',
-        ttl: 43200
+        ttl: 86400
       }
 
       let editor = getEditor()
@@ -166,7 +166,7 @@ describe('AmnesiaIo', function() {
       let payload = {
         content: 'let thing = false',
         extension: 'js',
-        ttl: 43200
+        ttl: 86400
       }
 
       let editor = getEditor()
@@ -180,7 +180,7 @@ describe('AmnesiaIo', function() {
       let payload = {
         content: 'let thing = false\n\n...\n\nlet somethingElse = 12',
         extension: 'js',
-        ttl: 43200
+        ttl: 86400
       }
 
       let editor = getEditor()
