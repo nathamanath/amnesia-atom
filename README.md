@@ -48,7 +48,7 @@ See example below, values shown are defaults:
     "amnesia-io":
 
       # How long amnesia.io will hold on to your code snippets for
-      ttl: 43200,           
+      ttl: 43200,
 
       # Syntax highlighting format which will be used if it cannot be discerned
       # from your file name
